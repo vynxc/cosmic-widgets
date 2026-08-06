@@ -1,0 +1,21 @@
+[package]
+name = "cw-shell-wayland"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+cw-core = { path = "../cw-core" }
+cw-renderer = { path = "../cw-renderer", features = ["vello"] }
+pollster.workspace = true
+raw-window-handle.workspace = true
+smithay-client-toolkit.workspace = true
+thiserror.workspace = true
+wayland-client.workspace = true
+vello.workspace = true
+wgpu.workspace = true
+
+[lints]
+workspace = true

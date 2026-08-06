@@ -1,0 +1,23 @@
+[package]
+name = "cosmic-widgets"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+cw-core = { path = "../cw-core" }
+cw-renderer = { path = "../cw-renderer" }
+cw-runtime = { path = "../cw-runtime" }
+cw-shell-wayland = { path = "../cw-shell-wayland" }
+serde_json.workspace = true
+time.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+zbus.workspace = true
+
+[lints]
+workspace = true

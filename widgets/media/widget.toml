@@ -1,0 +1,24 @@
+schema = 1
+id = "io.github.vynxc.Media"
+version = "0.1.0"
+name = "Media"
+description = "MPRIS playback controls with current track details."
+entry = "index.html"
+placements = ["desktop", "edge"]
+capabilities = ["media-control"]
+
+[default_size]
+width = 380
+height = 190
+
+[min_size]
+width = 300
+height = 150
+
+[max_size]
+width = 760
+height = 380
+
+[refresh]
+kind = "on-change"
+

@@ -1,0 +1,24 @@
+schema = 1
+id = "io.github.vynxc.SystemMonitor"
+version = "0.1.0"
+name = "System monitor"
+description = "Glanceable CPU, memory, disk, and network activity."
+entry = "index.html"
+placements = ["desktop", "edge"]
+capabilities = ["system-metrics"]
+
+[default_size]
+width = 360
+height = 226
+
+[min_size]
+width = 280
+height = 180
+
+[max_size]
+width = 720
+height = 452
+
+[refresh]
+kind = "on-change"
+

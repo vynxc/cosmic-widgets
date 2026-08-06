@@ -1,0 +1,64 @@
+[workspace]
+members = [
+    "crates/cw-core",
+    "crates/cw-runtime",
+    "crates/cw-renderer",
+    "crates/cw-shell-wayland",
+    "crates/cosmic-widgets",
+    "crates/cosmic-widgets-applet",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "MIT"
+repository = "https://github.com/vynxc/cosmic-widgets"
+
+[workspace.dependencies]
+anyhow = "1.0"
+anyrender_vello = "=0.12.0"
+async-trait = "0.1"
+bitflags = { version = "2.9", features = ["serde"] }
+clap = { version = "4.5", features = ["derive"] }
+extism = { version = "1.30", default-features = false, features = ["wasmtime-default-features"] }
+futures-lite = "2.6"
+pollster = "0.4"
+raw-window-handle = "0.6"
+semver = { version = "1.0", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_cbor = "0.11"
+serde_json = "1.0"
+sha2 = "0.10"
+smithay-client-toolkit = "0.21"
+tempfile = "3.20"
+thiserror = "2.0"
+time = { version = "0.3", features = ["formatting", "local-offset", "macros"] }
+toml = "0.9"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uuid = { version = "1.17", features = ["serde", "v4"] }
+vello = { version = "=0.9.0", features = ["wgpu"] }
+wayland-client = { version = "0.31", features = ["system"] }
+wgpu = { version = "29", default-features = false, features = ["std", "gles", "vulkan", "wgsl"] }
+zip = { version = "6.0", default-features = false, features = ["deflate-flate2-zlib-rs"] }
+zbus = { version = "5.18", features = ["blocking"] }
+
+[workspace.lints.rust]
+future-incompatible = "warn"
+missing-docs = "allow"
+nonstandard-style = "deny"
+unsafe-code = "deny"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = 10 }
+pedantic = { level = "warn", priority = 3 }
+module-name-repetitions = { level = "allow", priority = 4 }
+must-use-candidate = { level = "allow", priority = 4 }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

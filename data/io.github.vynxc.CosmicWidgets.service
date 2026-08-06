@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=io.github.vynxc.CosmicWidgets
+Exec=cosmic-widgets serve
+

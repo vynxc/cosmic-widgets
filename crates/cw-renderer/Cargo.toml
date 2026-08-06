@@ -1,0 +1,38 @@
+[package]
+name = "cw-renderer"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+blitz = [
+    "dep:anyrender",
+    "dep:blitz-dom",
+    "dep:blitz-html",
+    "dep:blitz-paint",
+    "dep:blitz-traits",
+]
+vello = [
+    "blitz",
+    "dep:anyrender_vello",
+    "dep:vello",
+]
+
+[dependencies]
+anyrender = { version = "=0.11.1", optional = true }
+anyrender_vello = { workspace = true, optional = true }
+blitz-dom = { version = "=0.3.0-beta.1", default-features = false, features = ["accessibility", "system-fonts"], optional = true }
+blitz-html = { version = "=0.3.0-beta.1", default-features = false, optional = true }
+blitz-paint = { version = "=0.3.0-beta.1", default-features = false, optional = true }
+blitz-traits = { version = "=0.3.0-beta.1", default-features = false, optional = true }
+cw-core = { path = "../cw-core" }
+serde.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
+vello = { workspace = true, optional = true }
+
+[lints]
+workspace = true

@@ -1,0 +1,24 @@
+schema = 1
+id = "io.github.vynxc.StickyNote"
+version = "0.1.0"
+name = "Sticky note"
+description = "A persistent note kept behind application windows."
+entry = "index.html"
+placements = ["desktop"]
+capabilities = ["instance-storage"]
+
+[default_size]
+width = 300
+height = 260
+
+[min_size]
+width = 200
+height = 160
+
+[max_size]
+width = 700
+height = 700
+
+[refresh]
+kind = "on-change"
+

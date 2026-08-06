@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Desktop Widgets
+Comment=Add and arrange COSMIC desktop widgets
+Type=Application
+Exec=cosmic-widgets-applet toggle-edit
+Icon=io.github.vynxc.CosmicWidgets
+Terminal=false
+NoDisplay=true
+Categories=COSMIC;Utility;
+X-CosmicApplet=true
+X-CosmicHoverPopup=Auto
+

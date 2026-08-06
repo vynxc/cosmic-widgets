@@ -1,0 +1,25 @@
+[package]
+name = "cw-runtime"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = ["extism-runtime"]
+extism-runtime = ["dep:extism"]
+
+[dependencies]
+cw-core = { path = "../cw-core" }
+extism = { workspace = true, optional = true }
+serde.workspace = true
+serde_cbor.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+time.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true
+

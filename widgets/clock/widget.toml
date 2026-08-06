@@ -1,0 +1,23 @@
+schema = 1
+id = "io.github.vynxc.Clock"
+version = "0.1.0"
+name = "Clock"
+description = "A quiet clock and calendar for the COSMIC desktop."
+entry = "index.html"
+placements = ["desktop", "edge"]
+
+[default_size]
+width = 320
+height = 184
+
+[min_size]
+width = 220
+height = 128
+
+[max_size]
+width = 640
+height = 360
+
+[refresh]
+kind = "on-change"
+
